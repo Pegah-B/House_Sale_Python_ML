@@ -4,21 +4,25 @@ This project aims to predict house prices using machine learning techniques. The
 ## Files
 1. House_Sales_EDA.ipynb
    
-   &nbsp;&nbsp; Explores the dataset structure, features, and distributions. Handles missing values and outliers, and performs necessary data transformations. Utilizes data visualization for exploring correlations and relationships between features. Outputs the cleansed and preprocessed data to "Cleansed_Data.csv."
+   &nbsp;&nbsp; Explores the dataset structure, features, and distributions. Handles missing values and outliers, and performs necessary data transformations. Utilizes data visualization for exploring correlations and relationships between features. 
 
-3. House_Sales_ML.ipynb
+3. House_Sale_Preprocessing.ipynb
+
+   &nbsp;&nbsp; Preprocess the house sale data before training a ML model for house prices predicton. Includes handling missing values and performing necessary data transformations. Outputs the cleansed and preprocessed data to "Preprocessed_Data.csv."
+
+5. House_Sales_ML.ipynb
    
    &nbsp;&nbsp;Uses "Cleansed_Data.csv" for training machine learning models using random forest and lasso regression models for house price prediction. Including various metrics for evaluation. 
 
-5. realtor-data.csv
+7. realtor-data.csv
    
    &nbsp;&nbsp; Dataset used in this project, downloaded from Kaggle.
 
-7. Cleansed_Data.csv.csv
+9. Preprocessed_Data.csv.csv
    
-   &nbsp;&nbsp; Cleaned and preprocessed data from "House_Sales_EDA.ipynb".
+   &nbsp;&nbsp; Cleansed and preprocessed data from "House_Sale_Preprocessing.ipynb".
 
-9. requirements.txt
+11. requirements.txt
     
    &nbsp;&nbsp; Includes dependencies for the project. To install dependencies, use:
      ```
