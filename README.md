@@ -1,4 +1,4 @@
-#Real Estate Price Prediction Model: An EDA and Machine Learning Approach
+# Real Estate Price Prediction Model: An EDA and Machine Learning Approach
 
 ## Overview
 This project aims to predict house prices using machine learning techniques. The dataset used in this analysis contains real estate listings in the US broken by State and zip code, downloaded from https://www.kaggle.com/datasets/ahmedshahriarsakib/usa-real-estate-dataset
