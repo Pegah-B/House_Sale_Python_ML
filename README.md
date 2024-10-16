@@ -38,7 +38,7 @@ The project consists of three main parts:
 ```templates/index.html```: HTML page for user interaction, allowing input of house features for price prediction.
 
 ## 
-To run the project locally, follow these steps:
+To run the project locally:
 
 1. Clone the project repository: ```git clone <repository-url>``` and ```cd real_estate_price_prediction```
 2. Install dependencies: ```pip install -r requirements.txt```
