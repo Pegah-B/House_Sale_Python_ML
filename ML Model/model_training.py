@@ -6,21 +6,34 @@ from sklearn.model_selection import train_test_split
 import pickle
 
 df = pd.read_csv('Preprocessed_Data.csv')
-
+#one-hot encoding
 df = pd.get_dummies(df, columns=['status'])
 df = pd.get_dummies(df, columns=['city'])
 df = pd.get_dummies(df, columns=['state'])
-
+#Features and Target variable
 X = df.drop(['price'], axis=1)
 y = df['price']
 
-x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+#Save Columns Names as JSON
+data_columns = [col for col in X.columns]
+import json
+columns = {'data_columns' : data_columns}
+with open ('data_columns.json' , 'w') as f:
+    json.dump(columns , f)
 
+#Group Cities by State and Save as JSON
+state_city_dict = df.groupby('state')['city'].apply(lambda x: list(set(x))).to_dict()
+import json
+with open('state_city.json', 'w') as json_file:
+    json.dump(state_city_dict, json_file)
+    
+#Split the Dataset for Training and Testing 
+x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+#Train Models
 ml_model = {
     'RF'  : RandomForestRegressor(),
     'XGB' : XGBRegressor()
 }
-
 # Hyperparameters selected based on GridSearch done in the notebook file "House_Sales_ML.ipynb"
 hyper_params = {
     'RF': {
@@ -84,12 +97,11 @@ hyper_params = {
         'verbosity': None
     }
 }
-
+#Save ML Models
 model_filenames = {
     'RF': 'ml_model_v1.pickle',
     'XGB': 'ml_model_v2.pickle'
 }
-
 for model_name, model in ml_model.items():
     print(f"Training started for {model_name} model...")
     model.set_params(**hyper_params[model_name])
