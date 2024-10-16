@@ -25,9 +25,11 @@ The project consists of three main parts:
 2. **ML Model**
    
  &nbsp;&nbsp; Contains the pre-trained machine learning models and related metadata.
-```ml_model_v1.pickle```: Random Forest Classifier (Version 1).
-```ml_model_v2.pickle```: XGBoost Classifier (Version 2).
+```model_training.py```: Script to train and save the models.
+```ml_model_v1.pickle```: Random Forest Regressor (Version 1).
+```ml_model_v2.pickle```: XGBoost Regressor (Version 2).
 ```data_columns.json```: JSON file listing the feature columns used during model training.
+```state_city.json```: JSON file listing state and city info
 
 
 3. **Model Deployment**
@@ -40,12 +42,12 @@ The project consists of three main parts:
 ## 
 To run the project locally:
 
-1. Clone the project repository: ```git clone <repository-url>``` and ```cd real_estate_price_prediction```
-2. Install dependencies: ```pip install -r requirements.txt```
-3. Running Jupyter Notebooks (EDA, Preprocessing, and Model Training):
-   Navigate to Data and Notbooks folder and run ```jupyter notebook_name.ipynb```
-4. Running the Flask Web Application for Model Deployment: Navigate to the deployment folder and start the Flask application by ```python app.py```
-5. Access the web app: By default, the app runs on ```http://localhost:8000```. Open your web browser and visit ```http://localhost:8000```.
+1. Clone the project repository: ```git clone <repository-url>``` and ```cd real_estate_price_prediction```.
+2. Install dependencies: ```pip install -r requirements.txt```.
+3. Explore data and run Jupyter Notebooks (EDA, Preprocessing, and Model Training): Navigate to the "Data and Notbooks" folder and run ```jupyter notebook_name.ipynb```.
+4. Model Training: Navigate to the "ML Model folder" and run ```model_training.py``` to create two trained model versions ```ml_model_v1.pickle``` (Random forest) and ```ml_model_v2.pickle``` (XGBoost). 
+5. Run the Flask Web Application for Model Deployment: Navigate to the "Model Deployment" folder and start the Flask application by ```python app.py```.
+6. Access the web app: By default, the app runs on ```http://localhost:8000```. Open your web browser and visit ```http://localhost:8000```.
 
 
 ## Requirements
