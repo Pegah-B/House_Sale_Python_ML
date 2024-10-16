@@ -25,19 +25,19 @@ The project consists of three main parts:
 2. **ML Model**
    
  &nbsp;&nbsp; Contains the pre-trained machine learning models and related metadata.
-```model_training.py```: Script to train and save the models.
-```ml_model_v1.pickle```: Random Forest Regressor (Version 1).
-```ml_model_v2.pickle```: XGBoost Regressor (Version 2).
-```data_columns.json```: JSON file listing the feature columns used during model training.
-```state_city.json```: JSON file listing state and city info
+- ```model_training.py```: Script to train and save the models.
+- ```ml_model_v1.pickle```: Random Forest Regressor (Version 1).
+- ```ml_model_v2.pickle```: XGBoost Regressor (Version 2).
+- ```data_columns.json```: JSON file listing the feature columns used during model training.
+- ```state_city.json```: JSON file listing state and city info
 
 
 3. **Model Deployment**
    
  &nbsp;&nbsp; Contains the Flask web application that serves the trained machine learning models.
-```app.py```: Main Flask application script that handles user input and serves predictions.
-```util.py```: Contains helper functions for loading models and making predictions.
-```templates/index.html```: HTML page for user interaction, allowing input of house features for price prediction.
+- ```app.py```: Main Flask application script that handles user input and serves predictions.
+- ```util.py```: Contains helper functions for loading models and making predictions.
+- ```templates/index.html```: HTML page for user interaction, allowing input of house features for price prediction.
 
 ## 
 To run the project locally:
